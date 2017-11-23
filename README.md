@@ -1,7 +1,7 @@
 # lmstfu-node
 A node.js proxy demonstrating virtual patching, lmstfu.com style
 
-See [lmstfu.com](lmstfu.com) for details.
+See [lmstfu.com](https://lmstfu.com) for details.
 
 This is a fairly simple node.js application that runs a reverse proxy.
 
