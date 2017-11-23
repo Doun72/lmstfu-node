@@ -12,7 +12,6 @@ var reverseProxy = redbird(
     });
 
 reverseProxy.register("localhost", "http://lmstfu.dev.0-days.net:5000/", {useTargetHostHeader: true});
-//reverseProxy.register("localhost", "http://www.dev.0-days.net", {useTargetHostHeader: true});
 
 reverseProxy.proxy.on('proxyReq', changeimage.onRequest());
 
@@ -27,11 +26,6 @@ reverseProxy.proxy.on('proxyRes', creditcard.onResponse());
 
 reverseProxy.proxy.on('proxyReq', autocomplete.onRequest());
 reverseProxy.proxy.on('proxyRes', autocomplete.onResponse());
-
-
-// Superceded by modsecurity rules
-// Only works for HTTPS site:
-//reverseProxy.proxy.on('proxyRes', securecookies.onResponse());
 
 reverseProxy.proxy.on('error', function (err, req, res) {
   res.writeHead(500, {
