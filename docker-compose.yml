@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    command: nodemon --inspect=5858 -L
+    volumes:
+      - .:/code
+    ports:
+      - "8000:5470"
+      - "5858:5858"
